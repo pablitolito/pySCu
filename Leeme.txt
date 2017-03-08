@@ -1,20 +1,21 @@
-El programa consta de tres mÛdulos, uno para realizar los c·lculos (pySCu_calc) y dos para dibujar (pySCu_draw y pySCu_draw_labels)
-Para ejecutarlos, es necesario que el programa estÈ en la misma carpeta en la que se encuentra el fichero de entrada
-Usa Python 2.7 con las librerÌas numpy, csv, sys y time.
+# -*- coding: utf-8 -*-
+El programa consta de tres m√≥dulos, uno para realizar los c√°lculos (pySCu_calc) y dos para dibujar (pySCu_draw y pySCu_draw_labels)
+Para ejecutarlos, es necesario que el programa est√© en la misma carpeta en la que se encuentra el fichero de entrada
+Usa Python 2.7 con las librer√≠as numpy, csv, sys y time.
 
 
 pySCu_calc.py:
 
-Es el programa principal y el que realiza los c·lculos.
-Pueden seguirse diversos flujos de trabajo seg˙n nuestros intereses (ver Workflow_SCucalc.png) respondiendo a dos preguntas (y,n)
-Recordar que este mÈtodo tiene dos soluciones simÈticas en el c·lculo de la inclinaciÛn de la direcciÛn de remagnetizaciÛn (ver Symmetry_PmagDir.png)
-	(tenemos que indicar si queremos una soluciÛn con inclinaciÛn positiva o negativa (p/n))
+Es el programa principal y el que realiza los c√°lculos.
+Pueden seguirse diversos flujos de trabajo seg√∫n nuestros intereses (ver Workflow_SCucalc.png) respondiendo a dos preguntas (y,n)
+Recordar que este m√©todo tiene dos soluciones sim√©ticas en el c√°lculo de la inclinaci√≥n de la direcci√≥n de remagnetizaci√≥n (ver Symmetry_PmagDir.png)
+	(tenemos que indicar si queremos una soluci√≥n con inclinaci√≥n positiva o negativa (p/n))
 
 Calcula:
 	- Los SCs
-	- La direcciÛn de remagnetizaciÛn
+	- La direcci√≥n de remagnetizaci√≥n
 	- Los paleodip
-	- Las direcciones paleomag. despuÈs de la correction total de capa (ATBC) y las direcciones Ûptimas (BFD)
+	- Las direcciones paleomag. despu√©s de la correction total de capa (ATBC) y las direcciones √≥ptimas (BFD)
 	- Las intersecciones de los SCs
 	- El grid con los valores de A/n
 
@@ -22,26 +23,26 @@ Input:
 	- Fichero de texto separado por espacios con encabezado (Ojo, no dejes espacios en los nombres de los sitios)
 	- Columnas (De izq. a dcha.):
 		- Nombre del sitio
-		- Dec dir pmag antes de la correcciÛn de capa (BBC)
-		- Inc dir pmag antes de la correcciÛn de capa (BBC)
+		- Dec dir pmag antes de la correcci√≥n de capa (BBC)
+		- Inc dir pmag antes de la correcci√≥n de capa (BBC)
 		- Alpha95 de la dir pmag
 		- Dipdir del bedding
 		- Dip del bedding
 
 Output:
 	Varios ficheros (mismo formato que el input), que utiliza el nombre del archivo de entrada, y los apellida de manera diferente a cada uno.
-	- *_main.txt: Es el archivo principal que contiene la informaciÛn calculada referente a cada site.
-		- Site, dir pmag en BBC, ATBC y BFD, bedding y paleobedding, par·metros de los SCs
-	- *_Qmean.txt: InformaciÛn sobre la direcciÛn de remagentizaciÛn calculada
-		- N˙mero de sites utilizados para el c·lculo de la direcciÛn, direcciÛn y valor de A/n para la misma
-	- *_matrix.txt: COntiene la informaciÛn referente al grid con los valores de A/n
-	- *_inter.txt: las direcciones de las intersecciones, y el nombre entre las estaciones que generan cada intersecciÛn
+	- *_main.txt: Es el archivo principal que contiene la informaci√≥n calculada referente a cada site.
+		- Site, dir pmag en BBC, ATBC y BFD, bedding y paleobedding, par√°metros de los SCs
+	- *_Qmean.txt: Informaci√≥n sobre la direcci√≥n de remagentizaci√≥n calculada
+		- N√∫mero de sites utilizados para el c√°lculo de la direcci√≥n, direcci√≥n y valor de A/n para la misma
+	- *_matrix.txt: COntiene la informaci√≥n referente al grid con los valores de A/n
+	- *_inter.txt: las direcciones de las intersecciones, y el nombre entre las estaciones que generan cada intersecci√≥n
 
 
 
 pySC_draw.py:
 	Es el programa de dibujo principal.
-	Nos permite dibujar 4 estereogramas en proy. de igual ·rea.
+	Nos permite dibujar 4 estereogramas en proy. de igual √°rea.
 		1: Dir. pmag BBC, y los SCs
 		2: Dir. pmag ATBC, y los SCs
 		3: Dir. pmag en BFD, y los SCs
@@ -49,14 +50,14 @@ pySC_draw.py:
 
 	Input: 
 		El programa usa todos los ficheros de salida del programa anterior. 
-		Podemos usarlo si no hemos calculado los valores de la matriz o las intersecciones, simplemente no las dibujar·.
+		Podemos usarlo si no hemos calculado los valores de la matriz o las intersecciones, simplemente no las dibujar√°.
 		El nombre del fichero que pide (como el programa indica), corresponde con el *_main.csv
 
 pySC_draw_labels.py:
-	Dibuja un estereograma en igual ·rea en el que representa:
+	Dibuja un estereograma en igual √°rea en el que representa:
 		- Dir. Pmag BBC, ATBC y BFD
-		- Dir PmagnÈtica calculada (tenemos que introducirla mediante el teclado)
+		- Dir Pmagn√©tica calculada (tenemos que introducirla mediante el teclado)
 		- Los SCs
 		- El nombre de cada sitio
 
-	Este mÛdulo est· diseÒado para usarlo en zonas concretas (e.g. un pliegue) con pocos sitios.
+	Este m√≥dulo est√° dise√±ado para usarlo en zonas concretas (e.g. un pliegue) con pocos sitios.
