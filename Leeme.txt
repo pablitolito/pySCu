@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 El programa consta de tres módulos, uno para realizar los cálculos (pySCu_calc) y dos para dibujar (pySCu_draw y pySCu_draw_labels)
 Para ejecutarlos, es necesario que el programa esté en la misma carpeta en la que se encuentra el fichero de entrada
 Usa Python 2.7 con las librerías numpy, csv, sys y time.
