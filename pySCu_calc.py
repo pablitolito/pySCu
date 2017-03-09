@@ -317,7 +317,7 @@ def cal_matriz(geo,bed):
 # In[11]:
 
 def save_out_file(header,data,name):
-    name_csv=name+'.dat'
+    name_csv=name+'.txt'
     data_out=[header]
     data_out.extend(data)
     file_out=open(name_csv, 'w')
