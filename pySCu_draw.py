@@ -230,7 +230,7 @@ def saveInputFile_matrix(files):
     #Saving the input file/data 
     #output have the same colums, but whithou header.
     #file = open(files)
-    reader=csv.reader(open(files, 'rU'), delimiter' ')
+    reader=csv.reader(open(files, 'rU'), delimiter=' ')
     dat=list(reader)
     file.close()
     data=dat[1:]    #removing the header
