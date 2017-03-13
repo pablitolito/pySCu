@@ -173,7 +173,7 @@ def cart2dir(cart):
  
 def saveInputFile(files):
     '''
-    Save a *csv file (files) in a list of list without its header.
+    Get information coming from a *txt file (files) in a list of list without its header.
     Input: string with the name of the file
            file: (Site, Dec, Inc, alfa95, dip direction, strike, dip)
     Output: (i) data: list of list with Site, Dec, Inc, alfa95, strike, dip (without header)
