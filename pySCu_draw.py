@@ -167,7 +167,7 @@ def cart2dir(cart):
  
 def saveInputFile_main(files):
     '''
-    Save a *csv file (files) in a list of list without its header.
+    Save a *txt file (files) in a list of list without its header.
     Input: string with the name of the file
            file: (Site, Dec, Inc, alfa95, dip direction, strike, dip)
     Output: (i) data: list of list with Site, Dec, Inc, alfa95, strike, dip (without header)
@@ -176,7 +176,7 @@ def saveInputFile_main(files):
     
     '''
     
-    #beig 'files' a csv comma separated with 5 columns and header (Site, Dec, Inc, alfa95, bed strike)   #Return a list with the same but without header, and with the numbers as float
+    #beig 'files' a txt spaced separated with 5 columns and header (Site, Dec, Inc, alfa95, bed strike)   #Return a list with the same but without header, and with the numbers as float
     #Saving the input file/data 
     #output have the same colums, but whithou header.
     reader=csv.reader(open(files, 'rU'), delimiter=' ')
@@ -217,7 +217,7 @@ def saveInputFile_main(files):
  
 def saveInputFile_matrix(files):
     '''
-    Save a *csv file (files) in a list of list without its header.
+    Save a *txt file (files) in a list of list without its header.
     Input: string with the name of the file
            file: (Site, Dec, Inc, alfa95, dip direction, strike, dip)
     Output: (i) data: list of list with Site, Dec, Inc, alfa95, strike, dip (without header)
@@ -332,9 +332,9 @@ if pregunta_A<>'y' and pregunta_A<>'n' and pregunta_inter<>'y' and pregunta_inte
 nombre=name_main[:-4]
 name_svg=name_main[:-9]+'.svg'
 name_png=name_main[:-9]+'.png'
-name_matrix=name_main[:-8]+'matrix.csv'
-name_Qmean=name_main[:-8]+'Qmean.csv'
-name_inter=name_main[:-8]+'inter.csv'
+name_matrix=name_main[:-8]+'matrix.txt'
+name_Qmean=name_main[:-8]+'Qmean.txt'
+name_inter=name_main[:-8]+'inter.txt'
 
 if path.exists(name_Qmean):    Qmean='true'
 else: Qmean='false'
