@@ -360,13 +360,13 @@ site,sc,geo,tilt,bfd=saveInputFile_main(name_main) #main file
 n=len(site)
 
 if Qmean=='true': #reference direction
-    reader=csv.reader(open(name_Qmean, 'rU'), dialect='excel')
+    reader=csv.reader(open(name_Qmean, 'rU'), delimiter=' ')
     dat_Qmean=list(reader)
     file.close()
     exp_dir=[float(dat_Qmean[1][1]),float(dat_Qmean[1][2])]
 
 if inter=='true' and pregunta_inter=='y': #intersections directions
-    reader=csv.reader(open(name_inter, 'rU'), dialect='excel')
+    reader=csv.reader(open(name_inter, 'rU'), delimiter=' ')
     dat_inter_h=list(reader)
     dat_inter=dat_inter_h[1:]
     file.close()
