@@ -292,7 +292,8 @@ def cal_matriz(geo,bed):
     matriz_pos=[]
     d_mat=0.
     n=len(geo)
-	
+    j=0
+    k=10
 
 
     while d_mat<360:
@@ -308,9 +309,15 @@ def cal_matriz(geo,bed):
             out=[d_mat,round(i_mat,0),x,y,xx,yy,A,An]
             matriz_pos.append(out)
             i_mat+=1
+	    j+=1
+            por=(100*j)/32400
+            if por>k:
+                print k,'%'
+                k+=10
         d_mat+=1
     d_mat=0
-    
+    print '100 %'
+	
     return matriz_pos
 
 
