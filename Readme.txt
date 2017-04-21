@@ -1,4 +1,4 @@
-This program is linked with CalvÃ­n et al., (in review). pySCu: a new python code for analyzing remagnetizations directions by means of Small Circle utilities. Computers and geosciences
+This program is linked with Calvín et al., (in review). pySCu: a new python code for analyzing remagnetizations directions by means of Small Circle utilities. Computers and geosciences
 
 
 pySCu has three different modules
