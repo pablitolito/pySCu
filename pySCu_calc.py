@@ -139,13 +139,14 @@ def main():
 
 	#joining the data in a unique list
 	out_main=[]
-		
-	Dir_remag=[N_sites,round(Qend['dec'],1),round(Qend['inc'],1),round(Qend['Eta'],1),round(Qend['Zeta'],1),
-	round(Qend['Edec'],1),round(Qend['Einc'],1),round(Qend['Zdec'],1),round(Qend['Zinc'],1),round(An,3),round(A_min,3),mr_mp,aaa]
-	print '\nKent mean remagnetization direction (Kent, 1982; Tauxe et al., 1991)', '\nDec / Inc: ', "%.1f" % Dir_remag[1],"/","%.1f" % Dir_remag[2]
-	print 'A/n: ',"%.3f" % An,'mr/mp: ',"%.2f" % mr_mp
-	print 'Eta_95, dec, inc:', "%.1f" % Dir_remag[3], "%.1f" % Dir_remag[5], "%.1f" % Dir_remag[6]
-	print 'Zeta_95, dec, inc', "%.1f" % Dir_remag[4], "%.1f" % Dir_remag[7], "%.1f" % Dir_remag[8] 	
+	
+	if pregunta_remag=='y':
+		Dir_remag=[N_sites,round(Qend['dec'],1),round(Qend['inc'],1),round(Qend['Eta'],1),round(Qend['Zeta'],1),
+		round(Qend['Edec'],1),round(Qend['Einc'],1),round(Qend['Zdec'],1),round(Qend['Zinc'],1),round(An,3),round(A_min,3),mr_mp,aaa]
+		print '\nKent mean remagnetization direction (Kent, 1982; Tauxe et al., 1991)', '\nDec / Inc: ', "%.1f" % Dir_remag[1],"/","%.1f" % Dir_remag[2]
+		print 'A/n: ',"%.3f" % An,'mr/mp: ',"%.2f" % mr_mp
+		print 'Eta_95, dec, inc:', "%.1f" % Dir_remag[3], "%.1f" % Dir_remag[5], "%.1f" % Dir_remag[6]
+		print 'Zeta_95, dec, inc', "%.1f" % Dir_remag[4], "%.1f" % Dir_remag[7], "%.1f" % Dir_remag[8] 	
 	
 	for i in range(len(site)):
 		site_main=[site[i][0],data[i][1],data[i][2],data[i][3],data[i][4],data[i][5],data[i][6],data[i][7],"%.1f" %tilt[i][0],"%.1f" %tilt[i][1],"%.1f" %BFD[i][0],"%.1f" %BFD[i][1],"%.0f" %bed_s[i][0],"%.2f" %api[i],"%.0f" %((paleobed[i][0]+90)%360),"%.0f" %paleobed[i][1],"%.1f" %distance[i]]
